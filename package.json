@@ -1,0 +1,65 @@
+{
+  "name": "graphql-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build-prod": "webpack --env.mode=production",
+    "build-dev": "webpack --env.mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YekaterinaKarakulina/graphQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YekaterinaKarakulina/graphQL/issues"
+  },
+  "homepage": "https://github.com/YekaterinaKarakulina/graphQL#readme",
+  "dependencies": {
+    "@apollo/client": "^3.2.7",
+    "core-js": "^3.6.5",
+    "eslint-plugin-react": "^7.21.5",
+    "graphql": "^15.4.0",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.1",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "prettier": "^2.0.5",
+    "prettier-webpack-plugin": "^1.2.0",
+    "regenerator-runtime": "^0.13.7",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
