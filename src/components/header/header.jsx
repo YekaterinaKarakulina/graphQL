@@ -1,8 +1,9 @@
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
   const handleClick = () => {
     console.log("Header click");
+    console.log(props);
   };
 
   return (

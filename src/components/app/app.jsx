@@ -1,11 +1,21 @@
-/* eslint-disable new-cap */
+/* eslint-disable react/prop-types */
 import React from "react";
-import PageLayout from "../page-layout";
+
+const App = (props) => {
+  console.log(props);
+  const { children } = props;
+  return (
+    <div>
+      App component
+      {children}
+    </div>
+  );
+};
 
 /* Layout */
-const App = () => {
-  return <PageLayout />;
-};
+// const App = () => {
+//   return <PageLayout />;
+// };
 
 /* Class import */
 
