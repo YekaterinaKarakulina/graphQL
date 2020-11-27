@@ -6,20 +6,12 @@ const withDynamic = (Component, data) => {
 
     return (
       <Component>
-        {data.map(({ name, path, props, nestedComponents }) => {
-          let newProps = props;
-          if (nestedComponents) {
-            newProps = {
-              ...props,
-              nestedComponents,
-            };
-          }
+        {data.map(({ name, path, props }) => {
           const NewComponent = React.lazy(() => import(`src/${path}`));
-
           return (
             <div key={name}>
               <Suspense fallback={<div>Loading ...</div>}>
-                <NewComponent {...newProps} />
+                <NewComponent {...props} />
               </Suspense>
             </div>
           );
@@ -30,33 +22,6 @@ const withDynamic = (Component, data) => {
 };
 
 export default withDynamic;
-
-// ----------------------------------- //
-
-// import React, { Suspense } from "react";
-
-// const withDynamic = (Component, data) => {
-//   return () => {
-//     console.log(data);
-
-//     return (
-//       <Component>
-//         {data.map(({ name, path, props }) => {
-//           const NewComponent = React.lazy(() => import(`src/${path}`));
-//           return (
-//             <div key={name}>
-//               <Suspense fallback={<div>Loading ...</div>}>
-//                 <NewComponent {...props} />
-//               </Suspense>
-//             </div>
-//           );
-//         })}
-//       </Component>
-//     );
-//   };
-// };
-
-// export default withDynamic;
 
 // ----------------------------------- //
 
